@@ -79,7 +79,7 @@
 </head>
 <body>
     <div id="main">
-        <h1>Онлайн магазин</h1>
+        <h1>Онлайн магазин1</h1>
         <img src="https://w.forfun.com/fetch/5d/5d3aacefdbaad0ae0ad149dfc915613f.jpeg" height=50, width=50>
         <p>Это классный интернет магазин.</p>
         <button id="buy">Купить</button>
@@ -108,7 +108,14 @@
             let name = document.getElementById("user_name").value;
             let email = document.getElementById("user_email").value;
             let phone = document.getElementById("user_phone").value;
-            
+            if(name.length < 5) {
+                document.getElementById("error").innerText = 'Ошибка в имени';
+                return;
+            }
+            if(email.length < 5) {
+                document.getElementById("error").innerText = 'Ошибка в email';
+                return;
+            }
             if(phone.length < 5) {
                 document.getElementById("error").innerText = 'Ошибка в номере телефона';
                 return;
